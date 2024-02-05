@@ -20,10 +20,10 @@ class _degreeState extends State<degree> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Expanded(
-                flex: 5,
+                flex: 3,
                 child: Divider(
                   indent: 0.0,
-                  endIndent: 8.0,
+                  endIndent: 6.0,
                   thickness: 1,
                 ),
               ),
@@ -39,8 +39,8 @@ class _degreeState extends State<degree> {
               Expanded(
                 flex: 1,
                 child: Divider(
-                  indent: 8.0,
-                  endIndent: 0.0,
+                  indent: 6.0,
+                  endIndent: 15.0,
                   thickness: 1,
                 ),
               ),
@@ -90,7 +90,7 @@ class _degreeState extends State<degree> {
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "M.E.",
+                      "M.Sc.",
                       style: TextStyle(
                         color: Colors.white,
                       ),
