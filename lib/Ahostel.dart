@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:basics_flutter/main.dart';
+
 
 class Ahostel extends StatefulWidget {
   const Ahostel({super.key});
@@ -19,9 +19,9 @@ class _AhostelState extends State<Ahostel> {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Expanded(
-                flex: 3,
+                flex: 1,
                 child: Divider(
                   indent: 0.0,
                   endIndent: 6.0,
@@ -29,7 +29,7 @@ class _AhostelState extends State<Ahostel> {
                 ),
               ),
               Text(
-                "A-Hostels",
+                "A Hostels",
                 style: TextStyle(
                   color: Color(0xFFCECECE),
                   fontFamily: "Jost",
@@ -38,13 +38,30 @@ class _AhostelState extends State<Ahostel> {
                 ),
               ),
               Expanded(
-                flex: 1,
+                flex: 6,
                 child: Divider(
                   indent: 6.0,
-                  endIndent: 15.0,
+                  endIndent: 5.0,
                   thickness: 1,
                 ),
               ),
+              ToggleButtons(
+                selectedColor: Colors.red,
+                constraints:
+                    BoxConstraints(maxWidth: 30, minWidth: 10, minHeight: 30),
+                children: <Widget>[
+                  Icon(
+                    Icons.library_add_check_rounded,
+                    color: Colors.green,
+                  )
+                ],
+                isSelected: _selections,
+                onPressed: (int index) {
+                  setState(() {
+                    _selections[index] = !_selections[index];
+                  });
+                },
+              )
             ],
           ),
           SizedBox(

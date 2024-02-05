@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:basics_flutter/degree.dart';
+import 'package:basics_flutter/MSc.dart';
 import 'package:basics_flutter/Ahostel.dart';
 import 'package:basics_flutter/Chostel.dart';
 import 'package:basics_flutter/Dhostel.dart';
+import 'package:basics_flutter/BE.dart';
+import 'package:basics_flutter/year.dart';
 
 void main() {
   runApp(const MaterialApp(home: project()));
@@ -64,7 +66,9 @@ class _projectState extends State<project> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.stretch,
                                         children: <Widget>[
-                                          degree(),
+                                          year(),
+                                          BE(),
+                                          MSc(),
                                           Ahostel(),
                                           Chostel(),
                                           Dhostel(),
@@ -111,7 +115,7 @@ class _projectState extends State<project> {
                                   ),
                                   SizedBox(
                                     height: 35,
-                                    width: 116,
+                                    width: 120,
                                     child: ElevatedButton(
                                         style: ElevatedButton.styleFrom(
                                             shape: RoundedRectangleBorder(

@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:basics_flutter/main.dart';
 
-class Dhostel extends StatefulWidget {
-  const Dhostel({super.key});
+class BE extends StatefulWidget {
+  const BE({super.key});
 
   @override
-  State<Dhostel> createState() => _DhostelState();
+  State<BE> createState() => _BEState();
 }
 
-class _DhostelState extends State<Dhostel> {
+class _BEState extends State<BE> {
   List<bool> _selections = List.generate(1, (_) => false, growable: true);
-  List<String> _selectedD = List.generate(1, (_) => " ", growable: true);
   @override
   Widget build(BuildContext context) {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -29,7 +26,7 @@ class _DhostelState extends State<Dhostel> {
                 ),
               ),
               Text(
-                "D Hostels",
+                "B.E.",
                 style: TextStyle(
                   color: Color(0xFFCECECE),
                   fontFamily: "Jost",
@@ -50,14 +47,14 @@ class _DhostelState extends State<Dhostel> {
                 constraints:
                     BoxConstraints(maxWidth: 30, minWidth: 10, minHeight: 30),
                 children: <Widget>[
-                  Icon(Icons.library_add_check_rounded,                    
+                  Icon(
+                    Icons.library_add_check_rounded,
                     color: Colors.green,
                   )
                 ],
                 isSelected: _selections,
                 onPressed: (int index) {
                   setState(() {
-                    
                     _selections[index] = !_selections[index];
                   });
                 },
@@ -65,7 +62,7 @@ class _DhostelState extends State<Dhostel> {
             ],
           ),
           SizedBox(
-            height: 10,
+            height: 5,
           ),
           Row(
             children: [
@@ -73,14 +70,13 @@ class _DhostelState extends State<Dhostel> {
                 constraints:
                     BoxConstraints(maxWidth: 150, minWidth: 70, minHeight: 30),
                 borderColor: Colors.greenAccent[400],
-                selectedColor: Colors.green,
                 fillColor: Colors.green,
                 borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(10), right: Radius.circular(10)),
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-1",
+                      "CS",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -107,7 +103,7 @@ class _DhostelState extends State<Dhostel> {
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-2",
+                      "ECE",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -128,14 +124,13 @@ class _DhostelState extends State<Dhostel> {
                 constraints:
                     BoxConstraints(maxWidth: 150, minWidth: 70, minHeight: 30),
                 borderColor: Colors.greenAccent[400],
-                selectedColor: Colors.green,
                 fillColor: Colors.green,
                 borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(10), right: Radius.circular(10)),
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-3",
+                      "EEE",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -145,34 +140,28 @@ class _DhostelState extends State<Dhostel> {
                 isSelected: _selections,
                 onPressed: (int index) {
                   setState(() {
-                    _selectedD[index] = "DH-3";
                     _selections[index] = !_selections[index];
                   });
                 },
-              ),
-              SizedBox(
-                width: 10,
               ),
             ],
           ),
           SizedBox(
             height: 10,
           ),
-//8TH ROW
           Row(
             children: [
               ToggleButtons(
                 constraints:
                     BoxConstraints(maxWidth: 150, minWidth: 70, minHeight: 30),
                 borderColor: Colors.greenAccent[400],
-                selectedColor: Colors.green,
                 fillColor: Colors.green,
                 borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(10), right: Radius.circular(10)),
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-4",
+                      "ENI",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -199,7 +188,7 @@ class _DhostelState extends State<Dhostel> {
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-5",
+                      "Mech",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -220,14 +209,13 @@ class _DhostelState extends State<Dhostel> {
                 constraints:
                     BoxConstraints(maxWidth: 150, minWidth: 70, minHeight: 30),
                 borderColor: Colors.greenAccent[400],
-                selectedColor: Colors.green,
                 fillColor: Colors.green,
                 borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(10), right: Radius.circular(10)),
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "DH-6",
+                      "Chem",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -237,16 +225,16 @@ class _DhostelState extends State<Dhostel> {
                 isSelected: _selections,
                 onPressed: (int index) {
                   setState(() {
-                    _selectedD[index] = "DH-6";
                     _selections[index] = !_selections[index];
                   });
                 },
-              ),
-              SizedBox(
-                width: 10,
               ),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
         ]);
+    ;
   }
 }

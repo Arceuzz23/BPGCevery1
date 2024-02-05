@@ -19,9 +19,9 @@ class _ChostelState extends State<Chostel> {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Expanded(
-                flex: 3,
+                flex: 1,
                 child: Divider(
                   indent: 0.0,
                   endIndent: 6.0,
@@ -29,7 +29,7 @@ class _ChostelState extends State<Chostel> {
                 ),
               ),
               Text(
-                "C-Hostels",
+                "C Hostels",
                 style: TextStyle(
                   color: Color(0xFFCECECE),
                   fontFamily: "Jost",
@@ -38,13 +38,30 @@ class _ChostelState extends State<Chostel> {
                 ),
               ),
               Expanded(
-                flex: 1,
+                flex: 6,
                 child: Divider(
                   indent: 6.0,
-                  endIndent: 15.0,
+                  endIndent: 5.0,
                   thickness: 1,
                 ),
               ),
+              ToggleButtons(
+                selectedColor: Colors.red,
+                constraints:
+                    BoxConstraints(maxWidth: 30, minWidth: 10, minHeight: 30),
+                children: <Widget>[
+                  Icon(Icons.library_add_check_rounded,                    
+                    color: Colors.green,
+                  )
+                ],
+                isSelected: _selections,
+                onPressed: (int index) {
+                  setState(() {
+                    
+                    _selections[index] = !_selections[index];
+                  });
+                },
+              )
             ],
           ),
 
@@ -263,6 +280,9 @@ class _ChostelState extends State<Chostel> {
                 width: 10,
               ),
             ],
+          ),
+          SizedBox(
+            height: 20,
           ),
         ]);
   }
