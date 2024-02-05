@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class Ahostel extends StatefulWidget {
   const Ahostel({super.key});
-
   @override
   State<Ahostel> createState() => _AhostelState();
 }
